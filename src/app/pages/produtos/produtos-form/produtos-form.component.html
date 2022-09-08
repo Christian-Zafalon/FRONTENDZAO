@@ -1,0 +1,30 @@
+<div class="card w-100 my-5">
+    <div class="card-body">
+        <h1 class="card-title text-center">Formulario de Produtos</h1>
+        <form [formGroup]="produtosForm">
+            <div class="row my-4">
+                <div class="form-floating mb-3 w-50">
+                    <input type="text" class="form-control" formControlName="nome" id="nome"
+                        placeholder="Nome do produto" [(ngModel)]="nome">
+                    <label for="nome">&nbsp; Nome</label>
+                </div>
+                <div class="form-floating mb-3 w-50">
+                    <input type="text" class="form-control" formControlName="preco" id="preco"
+                        placeholder="Preco do produto" [(ngModel)]="preco">
+                    <label for="preco">&nbsp; Preco</label>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="form-floating mb-3 w-50">
+                    <input type="text" class="form-control" formControlName="estoque" id="estoque"
+                        placeholder="Quantidade no estoque">
+                    <label for="estoque">&nbsp; Estoque</label>
+                </div>
+            </div>
+            <div class="form-group col-12 mt-4">
+                <button type="button" class="btn btn-outline-danger float-end" routerLink="/">Cancelar</button>
+                <button type="button" class="btn btn-outline-success float-start" (click)="actionButton()" href="/">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
